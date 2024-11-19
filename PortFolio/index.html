@@ -16,18 +16,19 @@
   <body>
     <!-- header section -->
     <section id="header" class="header">
-      <header>
-        <a href="#home" class="logo">Mehedi <span>Hasan</span></a>
-        <div class="navbar" id="nav-bar">
-          <a href="#home" class="active">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+      <nav class="navbar">
+        <div class="nav-left">
+          <h1>Mehedi </h1>
         </div>
-        <div class="Name_logo">
-          <img src="assets/M_logo.jpg" alt="" class="M-logo" />
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skill</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-      </header>
+      </nav>
     </section>
 
     <!-- Home section -->
@@ -45,16 +46,16 @@
 
         <!--Social icon part  -->
         <div class="social-icons">
-          <a href="https://web.facebook.com/HasanMehediX"
+          <a href="https://web.facebook.com/HasanMehediX" target="_blank"
             ><i class="fa-brands fa-facebook"></i
           ></a>
-          <a href="https://www.linkedin.com/in/HasanMehediX/"
+          <a href="https://www.linkedin.com/in/HasanMehediX/" target="_blank"
             ><i class="fa-brands fa-linkedin"></i
           ></a>
-          <a href="https://github.com/iammehedihasann"
+          <a href="https://github.com/iammehedihasann" target="_blank"
             ><i class="fa-brands fa-github"></i
           ></a>
-          <a href="https://www.instagram.com/mdmehedi313/"
+          <a href="https://www.instagram.com/mdmehedi313/" target="_blank"
             ><i class="fa-brands fa-instagram"></i
           ></a>
         </div>
@@ -63,7 +64,7 @@
         <div class="btn-grp">
           <a href="#" class="btn">Hire me</a>
           <a href="/mehedi_CV.pdf" class="btn" download="">CV</a>
-        </div>
+        </div> 
       </div>
 
       <div class="home_img">
@@ -73,8 +74,8 @@
 
     <!--About section  -->
     
-    <section class="about">
-      <h1 class="heading_for_all about">About</h1>
+    <section class="about" id="about">
+      <h1 class="heading about">About</h1>
       <div class="full_about">
         <div class="about-part-1">
           <h1 >What about Me?</h1>
@@ -85,10 +86,7 @@
             insterest in it increased day by day.It seemed very unique to me.I
             have many friends who are studing in very good universities but the
             vast mejority of them have no idea about this open sources
-            technologies.I liked this moment and enjoy this thing. Then i
-            learned a lot by completing programming Hero's well Known Web
-            development Course through 6 months of hard work.Which lead me to
-            become a front end web developer.I have many project with my skills.
+            technologies.I liked this moment and enjoy this thing.
           </p>
         </div>
         <div class="about-part-2">
@@ -102,28 +100,75 @@
         </div>
         <div class="about-part-3"></div>
       </div>
+ 
+    </section>
+
+    <!--skill section  -->
+
+    <section class="skills" >
+      <h1 class="skills-heading"> Skills</h1>
+      <div class="skill-info" >
         
+         <div class="skill-detail item-1" id="skills">
+            <a href="https://www.w3schools.com/" target="_blank"> 
+              <i class="fa-brands fa-html5"></i>
+            </a>
+            <h3>Html</h3>
+         </div>
+        
+         <div class="skill-detail item-2" id="skills">
+            <a href="https://www.w3schools.com/" target="_blank"> 
+              <i class="fa-brands fa-css3"></i>
+            </a>
+            <h3>CSS3</h3>
+         </div>
+        
+         <div class="skill-detail item-3" id="skills">
+            <a href="https://www.w3schools.com/js/default.asp" target="_blank"> 
+              <i class="fa-brands fa-js"></i>
+            </a>
+            <h3>JS</h3>
+         </div>
+        
+         <div class="skill-detail item-4" id="skills">
+            <a href="https://www.w3schools.com/c/index.php" target="_blank"> 
+              <i class="fa-solid fa-c"></i>
+            </a>
+            <h3>C</h3>
+         </div>
+
+         <div class="skill-detail item-5" id="skills">
+            <a href="https://www.w3schools.com/" target="_blank"> 
+              <i class="fa-brands fa-java"></i>
+            </a>
+            <h3>Java</h3>
+         </div>
+      </div>
+
+
+
+    </section>
+     
+    <!--static section  -->
+
+    <h1 class="skills-heading"> Statistics</h1>
+    <section class="statistics">
+      <div class="statistics-info">
+            <div class="stat-box">
+              <h2>12+</h2>
+              <p>On Going</p>
+          </div>
+          <div class="stat-box">
+              <h2>10+</h2>
+              <p>Projects Completed</p>
+          </div>
+          <div class="stat-box">
+              <h2 class="experience">Intern</h2>
+              <p>Experience</p>
+          </div>
+      </div>
       
     </section>
-
-    <section class="skills">
-      <h1 class="skills-heading">My Skills</h1>
-    </section>
-    <section class="statistics">
-      <div class="stat-box">
-          <h2>12+</h2>
-          <p>On Going</p>
-      </div>
-      <div class="stat-box">
-          <h2>10+</h2>
-          <p>Projects Completed</p>
-      </div>
-      <div class="stat-box">
-          <h2>3+</h2>
-          <p>Experience</p>
-      </div>
-  </section>
-
     
     <!-- project section -->
 
@@ -164,13 +209,13 @@
         <div class="project-card">
           <img src="/assets/project1.png" alt="Project 4" class="project-image" />
           <div class="project-info">
-              <h3 class="project-title">To-do app</h3>
-              <p class="project-description">Brief description of the project goes here.</p>
-              <a href="https://github.com/iammehedihasann/6-Month-Boatcamp-With-Basify/tree/main/To-Do_List" target="_blank" class="project-link">View Code</a>
-              <a href="https://bespoke-sunshine-61c637.netlify.app/" target="_blank" class="project-link">Live Demo</a>
-            </div>
+            <h3 class="project-title">To-do app</h3>
+            <p class="project-description">Brief description of the project goes here.</p>
+            <a href="https://github.com/iammehedihasann/6-Month-Boatcamp-With-Basify/tree/main/To-Do_List" target="_blank" class="project-link">View Code</a>
+            <a href="https://bespoke-sunshine-61c637.netlify.app/" target="_blank" class="project-link">Live Demo</a>
           </div>
         </div>
+      </div>
     </section>
     
    <section class="contact" id="contact">
@@ -205,25 +250,28 @@
       </div>
           
       
-            <div class="contact-part-2">
-              <div class="contact-form">
-                <div class="contact-info">
-                  <input type="text" name="name" id="name" placeholder="Your Name" required>
-                  <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
-                  <input type="tel" name="telephone" id="telephone" placeholder="+88017****" required><br>
-                  <textarea name="textarea" id="textarea" cols="30" placeholder="Your Messege Here" required></textarea>
-                  <button type="submit" class="submit-btn">Send Messege</button>
-                </div>
-              </div>
-            </div>
+      <div class="contact-part-2">
+        <div class="contact-form">
+          <div class="contact-info">
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            <input type="tel" name="telephone" id="telephone" placeholder="+88017****" required><br>
+            <textarea name="textarea" id="textarea" cols="30" placeholder="Your Messege Here" required></textarea>
+            <button type="submit" class="submit-btn">Send Messege</button>
+          </div>
+        </div>
+      </div>
    </section>
-   
 
-       <footer>
+   
+   <footer>
         <div class="container">
-          <p>©copy; 2024 Jehedi Hasan. All rights reserved.</p>
+          <p>©copy; 2024 Mehedi Hasan. All rights reserved.</p>
         </div>
     </footer>
+    
+  
+
     <script src="script.js"></script>
   </body>
 </html>
