@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  🔗 <a href="https://portfolio.vercel.app" target="_blank"><b>Live Demo</b></a> • 
+  🔗 <a href="[https://portfolio.vercel.app](https://vite-project-two-delta.vercel.app/)" target="_blank"><b>Live Demo</b></a> • 
   📧 <a href="mailto:mehediextreme@gmail.com">Email Me</a> • 
   💼 <a href="https://www.linkedin.com/in/hasanmehedix" target="_blank">LinkedIn</a>
 </p>
