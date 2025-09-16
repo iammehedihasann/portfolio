@@ -1,11 +1,9 @@
-
-
 // src/pages/Projects.jsx
 import ProjectCard from "../components/ProjectCard";
 import images from "../assets/images/agrotrends.jpg";
 import images2 from "../assets/images/medical.jpg";
 import images3 from "../assets/images/random_password.png";
-
+import images4 from "../assets/images/music.jpg";
 
 function Projects() {
   const projectList = [
@@ -36,20 +34,31 @@ function Projects() {
       github: "https://github.com/iammehedihasann/online-medical-booking",
       live: "https://online-medical-booking.vercel.app",
     },
+    {
+      title: "Online Music School",
+      description:
+        "A platform where can learn about music and music installment which are  built with React, next,typescript, Tailwind.",
+      tech: ["React,Next,typeScript,tailwind"],
+      image: images4,
+      github: "https://github.com/iammehedihasann/Unlock-Next",
+      live: "https://musicschool-nu.vercel.app/",
+    },
   ];
 
   return (
-    <section className="bg-gray-900 min-h-screen text-white px-6 py-16" id="projects"
+    <section
+      className="bg-gray-900 min-h-screen text-white px-6 py-16"
+      id="projects"
     >
-      <div className="max-w-6xl mx-auto text-center"
-      >
+      <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-400 mb-10">
           Featured Project
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-         data-aos="fade-left"
-       data-aos-duration="1000"
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          data-aos="fade-left"
+          data-aos-duration="1000"
         >
           {projectList.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
