@@ -4,6 +4,7 @@ import images from "../assets/images/agrotrends.jpg";
 import images2 from "../assets/images/medical.jpg";
 import images3 from "../assets/images/random_password.png";
 import images4 from "../assets/images/music.jpg";
+import images5 from "../assets/images/grocery.jpg";
 
 function Projects() {
   const projectList = [
@@ -42,6 +43,16 @@ function Projects() {
       image: images4,
       github: "https://github.com/iammehedihasann/Unlock-Next",
       live: "https://musicschool-nu.vercel.app/",
+    },
+    {
+      title: "Online Grocery Shop",
+      description:
+        "A platform where can find and buy products as you like which is build with React,  Tailwind.",
+      tech: ["React,Next,tailwind"],
+      image: images5,
+      github:
+        "https://github.com/iammehedihasann/e-commerce/tree/project/groceryShop-01",
+      live: "https://tinyurl.com/mohammadstore",
     },
   ];
 
