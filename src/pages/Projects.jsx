@@ -33,7 +33,7 @@ function Projects() {
       tech: ["React", "Tailwind", "Firebase"],
       image: images2,
       github: "https://github.com/iammehedihasann/online-medical-booking",
-      live: "https://online-medical-booking.vercel.app",
+      live: "https://online-medical-booking-azure.vercel.app/",
     },
     {
       title: "Online Music School",
