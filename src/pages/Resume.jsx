@@ -1,73 +1,253 @@
 // src/pages/Resume.jsx
+import { Button, Chip, Divider, Typography, Box, Paper } from "@mui/material";
+import {
+  FiDownload,
+  FiCalendar,
+  FiAward,
+  FiCode,
+  FiBookOpen,
+} from "react-icons/fi";
 
-function Resume() {
+const experiences = [
+  {
+    title: "React Developer",
+    company: "Self Developer",
+    period: "2025 – Present",
+    description:
+      "Building production-grade web applications using React, Tailwind CSS, Firebase Auth & Firestore. Working in agile teams on real user-facing products.",
+    icon: <FiCode className="text-2xl text-blue-400" />,
+  },
+  {
+    title: "AI Research Project (Academic)",
+    company: "University Project",
+    period: "2024",
+    description:
+      "Developed machine learning models in Python with data visualization dashboards using Matplotlib, Seaborn & Streamlit.",
+    icon: <FiAward className="text-2xl text-blue-400" />,
+  },
+];
+
+const education = [
+  {
+    degree: "B.Sc (Honours) in Computer Science & Engineering",
+    institution: "Green University, Bangladesh",
+    period: "2022 – 2026 (Expected)",
+    description:
+      "Specializing in Full-Stack Web Development, AI, Data Structures & Algorithms.",
+    icon: <FiBookOpen className="text-2xl text-blue-400" />,
+  },
+  {
+    degree: "100 Days of Code Challenge",
+    institution: "Self-Taught (MERN + Projects)",
+    period: "2023 – 2024",
+    description:
+      "Completed full MERN stack journey with 15+ deployed projects and participated in hackathons.",
+    icon: <FiCalendar className="text-2xl text-blue-400" />,
+  },
+];
+
+const skills = [
+  "React.js",
+  "Next.js",
+  "TypeScript",
+  "JavaScript (ES6+)",
+  "Tailwind CSS",
+  "Firebase",
+  "Node.js",
+  "Python",
+  "Git & GitHub",
+  "Responsive Design",
+  "REST APIs",
+  "AI & Machine Learning Basics",
+  "Figma",
+  "Vercel",
+  "Problem Solving",
+];
+
+export default function Resume() {
   return (
-    <section className="bg-gray-900 text-white px-6 py-16 min-h-screen">
-      <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-4xl font-bold text-blue-400 mb-6 text-center">Resume</h2>
-
-        {/* Top Download Button */}
-        <div className="text-center mb-10">
-          <a
-            href="/Mehedi_Hasan_CV.pdf" // <-- place your resume in public folder
-            download
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded inline-block transition"
+    <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-900 via-gray-900 to-blue-950/20 min-h-screen">
+      <div className="max-w-5xl mx-auto px-6">
+        {/* Header + Download Button */}
+        <div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <Typography
+            variant="h2"
+            className="text-5xl md:text-6xl font-extrabold text-white mb-6"
           >
-            <i className="fas fa-download mr-2"></i> Download CV
-          </a>
+            My Resume
+          </Typography>
+          <div className="w-32 h-1.5 bg-blue-500 mx-auto rounded-full mb-8"></div>
+
+          <Button
+            variant="contained"
+            size="large"
+            startIcon={<FiDownload />}
+            href="/Mehedi_Hasan_CV.pdf" // Put your PDF in public folder
+            download
+            sx={{
+              bgcolor: "#1d4ed8",
+              px: 6,
+              py: 2,
+              fontSize: "1.1rem",
+              fontWeight: 600,
+              borderRadius: 3,
+              boxShadow: "0 10px 30px rgba(29, 78, 216, 0.4)",
+              "&:hover": {
+                bgcolor: "#1e40af",
+                transform: "translateY(-3px)",
+                boxShadow: "0 15px 35px rgba(29, 78, 216, 0.5)",
+              },
+            }}
+          >
+            Download Resume (PDF)
+          </Button>
         </div>
 
-        {/* Resume Sections */}
-        <div className="grid md:grid-cols-2 gap-8" >
+        {/* Timeline: Experience + Education */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
           {/* Experience */}
-          <div data-aos="fade-right" data-aos-duration="1000">
-            <h3 className="text-xl font-semibold text-white mb-4">Experience</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li data-aos="fade-right" data-aos-duration="1000">
-                <strong>BasiFy - React Developer</strong><br />
-                Working on real-life web apps using React, Tailwind, and Firebase.
-              </li>
-              <li data-aos="fade-right" data-aos-duration="1000">
-                <strong>Academic AI Project</strong><br />
-                Python + AI model with visualization for data-driven insights.
-              </li>
-            </ul>
-          </div>
+          <Box>
+            <Typography
+              variant="h4"
+              className="text-3xl font-bold text-white mb-8 flex items-center gap-3"
+            >
+              <FiCode className="text-blue-400" /> Experience
+            </Typography>
+            {experiences.map((exp, i) => (
+              <Paper
+                key={i}
+                elevation={6}
+                sx={{
+                  p: 4,
+                  mb: 4,
+                  bgcolor: "rgba(31, 41, 55, 0.6)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(59, 130, 246, 0.3)",
+                  borderRadius: 3,
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    borderColor: "#60a5fa",
+                    transform: "translateX(8px)",
+                  },
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-blue-500/10 rounded-full">
+                    {exp.icon}
+                  </div>
+                  <div className="flex-1">
+                    <Typography
+                      variant="h6"
+                      className="text-xl font-bold text-white"
+                    >
+                      {exp.title}
+                    </Typography>
+                    <Typography className="text-blue-400 font-medium">
+                      {exp.company} • {exp.period}
+                    </Typography>
+                    <Typography className="text-gray-300 mt-2 text-sm leading-relaxed">
+                      {exp.description}
+                    </Typography>
+                  </div>
+                </div>
+              </Paper>
+            ))}
+          </Box>
 
           {/* Education */}
-          <div data-aos="fade-left" data-aos-duration="1000">
-            <h3 className="text-xl font-semibold text-white mb-4">Education</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li data-aos="fade-left" data-aos-duration="1000">
-                <strong>B.Sc (Honours) in CSE</strong><br />
-                Learning MERN Stack, AI, DSA, CS Fundamentals.
-              </li>
-              <li data-aos="fade-left" data-aos-duration="1000">
-                <strong>100 Days of Code Challenge</strong><br />
-                Full-stack Dev Journey (MERN + Projects + Hackathons).
-              </li>
-            </ul>
-          </div>
+          <Box>
+            <Typography
+              variant="h4"
+              className="text-3xl font-bold text-white mb-8 flex items-center gap-3"
+            >
+              <FiBookOpen className="text-blue-400" /> Education
+            </Typography>
+            {education.map((edu, i) => (
+              <Paper
+                key={i}
+                elevation={6}
+                sx={{
+                  p: 4,
+                  mb: 4,
+                  bgcolor: "rgba(31, 41, 55, 0.6)",
+                  backdropFilter: "blur(10px)",
+                  border: "1px solid rgba(59, 130, 246, 0.3)",
+                  borderRadius: 3,
+                  transition: "all 0.3s",
+                  "&:hover": {
+                    borderColor: "#60a5fa",
+                    transform: "translateX(8px)",
+                  },
+                }}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 bg-blue-500/10 rounded-full">
+                    {edu.icon}
+                  </div>
+                  <div className="flex-1">
+                    <Typography
+                      variant="h6"
+                      className="text-xl font-bold text-white"
+                    >
+                      {edu.degree}
+                    </Typography>
+                    <Typography className="text-blue-400 font-medium">
+                      {edu.institution} • {edu.period}
+                    </Typography>
+                    <Typography className="text-gray-300 mt-2 text-sm leading-relaxed">
+                      {edu.description}
+                    </Typography>
+                  </div>
+                </div>
+              </Paper>
+            ))}
+          </Box>
         </div>
 
-        {/* Skills */}
-        <div className="mt-10">
-          <h3 className="text-xl font-semibold text-white mb-4">Key Skills</h3>
-          <div className="flex flex-wrap gap-4 text-sm text-blue-300">
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-up" data-aos-duration="1000">HTML5</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-down" data-aos-duration="1000">CSS</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-up" data-aos-duration="1000">React.js</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-down" data-aos-duration="1000">JavaScript</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-up" data-aos-duration="1000">Tailwind CSS</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-down" data-aos-duration="1000">Firebase</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-up" data-aos-duration="1000">Python</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-down" data-aos-duration="1000">GitHub</span>
-            <span className="bg-gray-700 px-3 py-1 rounded" data-aos="fade-up" data-aos-duration="1000">Next.js</span>
+        {/* Skills Grid – Premium Chips */}
+        <Box className="text-center">
+          <Typography
+            variant="h4"
+            className="text-3xl font-bold text-white mb-10"
+          >
+            Technical Skills
+          </Typography>
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {skills.map((skill, i) => (
+              <div
+                key={i}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <Chip
+                  label={skill}
+                  sx={{
+                    bgcolor: "rgba(59, 130, 246, 0.15)",
+                    color: "#93c5fd",
+                    border: "1px solid rgba(59, 130, 246, 0.4)",
+                    fontWeight: 600,
+                    fontSize: "0.95rem",
+                    py: 2.5,
+                    px: 3,
+                    borderRadius: 3,
+                    height: "auto",
+                    "&:hover": {
+                      bgcolor: "rgba(59, 130, 246, 0.3)",
+                      transform: "translateY(-4px)",
+                      boxShadow: "0 8px 20px rgba(59, 130, 246, 0.3)",
+                    },
+                  }}
+                />
+              </div>
+            ))}
           </div>
-        </div>
+        </Box>
       </div>
     </section>
   );
 }
-
-export default Resume;

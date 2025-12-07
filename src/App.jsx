@@ -1,15 +1,11 @@
-
-import AppRoutes from './router/AppRoutes';
+import About from "./pages/About";
+import AppRoutes from "./router/AppRoutes";
 function App() {
-
-
   return (
     <div>
-
       <AppRoutes />
     </div>
-    
-  )
+  );
 }
 
-export default App
+export default App;

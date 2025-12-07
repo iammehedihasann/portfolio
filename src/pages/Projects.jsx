@@ -1,11 +1,9 @@
-
-
 // src/pages/Projects.jsx
 import ProjectCard from "../components/ProjectCard";
 import images from "../assets/images/agrotrends.jpg";
 import images2 from "../assets/images/medical.jpg";
 import images3 from "../assets/images/random_password.png";
-
+import images4 from "../assets/images/music.jpg";
 
 function Projects() {
   const projectList = [
@@ -25,7 +23,7 @@ function Projects() {
       tech: ["React", "Tailwind"],
       image: images3,
       github: "https://github.com/iammehedihasann/RandomPasswordGenerator",
-      live: "https://random-password-generator.vercel.app",
+      live: "https://random-password-generator-sigma-eight.vercel.app/",
     },
     {
       title: "Online Medical Booking",
@@ -34,22 +32,32 @@ function Projects() {
       tech: ["React", "Tailwind", "Firebase"],
       image: images2,
       github: "https://github.com/iammehedihasann/online-medical-booking",
-      live: "https://online-medical-booking.vercel.app",
+      live: "https://online-medical-booking-azure.vercel.app/",
+    },
+    {
+      title: "Online Music school",
+      description:
+        "A platform for online music school, built with Next.jsx,  Tailwind.",
+      tech: ["Next.js", "TypeScript", "aceternity ui"],
+      image: images4,
+      github: "https://github.com/iammehedihasann/Unlock-Next",
+      live: "https://musicschool-nu.vercel.app/",
     },
   ];
 
   return (
-    <section className="bg-gray-900 min-h-screen text-white px-6 py-16" id="projects"
+    <section
+      className="relative py-20 lg:py-32 px-6 overflow-hidden bg-gray-900"
+      id="projects"
     >
-      <div className="max-w-6xl mx-auto text-center"
-      >
-        <h2 className="text-4xl font-bold text-blue-400 mb-10">
+      <div className="max-w-6xl mx-auto text-center">
+        <h2 className="text-5xl font-bold text-blue-400 mb-10">
           Featured Project
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-         data-aos="fade-left"
-       data-aos-duration="1000"
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          data-aos-duration="1000"
         >
           {projectList.map((project, idx) => (
             <ProjectCard key={idx} {...project} />
