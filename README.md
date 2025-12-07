@@ -21,6 +21,15 @@
 ---
 
 ## 📸 Screenshot
+<img width="1149" height="710" alt="image" src="https://github.com/user-attachments/assets/182aa4d2-a16b-41eb-a7da-69c83fd6f72e" />
+
+##  Skills
+
+<img width="1365" height="734" alt="image" src="https://github.com/user-attachments/assets/ec4abdcd-df05-4cd4-91fd-aad5ac18c302" />
+
+## Projects
+
+<img width="884" height="679" alt="image" src="https://github.com/user-attachments/assets/d318b715-0e8a-4ea3-838f-0aaebfa166e7" />
 
 ![Portfolio Preview](.https://vite-project-two-delta.vercel.app/)
 
