@@ -31,7 +31,7 @@
 
 <img width="884" height="679" alt="image" src="https://github.com/user-attachments/assets/d318b715-0e8a-4ea3-838f-0aaebfa166e7" />
 
-![Portfolio Preview](.https://vite-project-two-delta.vercel.app/)
+![Portfolio Preview](https://mehedihasanx.netlify.app/)
 
 ---
 
