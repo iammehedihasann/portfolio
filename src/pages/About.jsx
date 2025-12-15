@@ -10,6 +10,8 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <h2
+          data-aos="fade-left"
+          data-aos-delay="400"
           className="text-3xl sm:text-6xl md:text-7xl lg:text-5xl font-bold text-center mb-16 lg:mb-24 
                         bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent"
         >
@@ -18,7 +20,11 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
           {/* Left: Text Content */}
-          <div className="space-y-8 lg:space-y-10">
+          <div
+            className="space-y-8 lg:space-y-10"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <div
               className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-12 
                             shadow-2xl hover:shadow-purple-500/20 transition-all duration-700"
@@ -52,6 +58,8 @@ export default function About() {
 
             {/* Tech Stack Card */}
             <div
+              data-aos="fade-left"
+              data-aos-delay="300"
               className="backdrop-blur-xl bg-gradient-to-br from-purple-900/50 to-cyan-900/30 
                             border border-white/20 rounded-3xl p-8 lg:p-10 shadow-2xl"
             >
@@ -106,7 +114,7 @@ export default function About() {
 
               {/* Floating Badge */}
               <div
-                className="absolute -bottom-4 -right-4 bg-gradient-to-br from-purple-600 to-cyan-600 
+                className="absolute -bottom-4 -right-4 bg-linear-to-br from-purple-600 to-cyan-600 
                               text-white font-bold px-6 py-3 rounded-full shadow-2xl 
                               animate-bounce"
               >

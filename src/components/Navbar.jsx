@@ -23,6 +23,7 @@ export default function Navbar() {
     { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
     { name: "Resume", path: "/resume" },
+    { name: "Skills", path: "/skills" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -71,7 +72,7 @@ export default function Navbar() {
             <Button
               variant="contained"
               href="#contact"
-              className="!ml-6 !bg-blue-600 hover:!bg-blue-700 !text-white !font-semibold !px-6 !py-3 !rounded-full !shadow-lg hover:!shadow-blue-500/50 transition-all duration-300"
+              className="ml-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
             >
               Hire Me
             </Button>
@@ -80,7 +81,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-gray-800/50 transition"
+            className="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-gray-800/50 transition  bg-gray-900"
           >
             <svg
               className="w-7 h-7"
@@ -130,7 +131,7 @@ export default function Navbar() {
                 variant="contained"
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="!mt-4 !bg-blue-600 hover:!bg-blue-700 !text-white !font-bold !py-4 !rounded-xl"
+                className="mt-4 bg-blue-600 hover:bg-blue-700 !text-white !font-bold !py-4 !rounded-xl"
               >
                 Hire Me
               </Button>

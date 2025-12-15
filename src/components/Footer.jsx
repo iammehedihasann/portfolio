@@ -122,6 +122,7 @@ export default function Footer() {
                       bgcolor: "rgba(59, 130, 246, 0.2)",
                       transform: "translateY(-3px)",
                       boxShadow: "0 8px 20px rgba(59, 130, 246, 0.3)",
+                      
                     },
                     transition: "all 0.3s",
                   }}
